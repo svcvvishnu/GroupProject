@@ -68,21 +68,21 @@ public class MerchantService {
     }
 
     @Transactional
-    public boolean updateProductPrice(Product product, Store store, int price) {
+    public ProductInventory updateProductPrice(Product product, Store store, int price) {
 
         ProductInventory productInventory = productInventoryRepository.getProductInventory(product, store);
 
         if (productInventory == null) {
-            throw new IllegalArgumentException("Could not find inventory with given Product in store:");
+            throw new IllegalArgumentException("Could not find inventory with given Product in store");
         }
 
         productInventory.setPrice(price);
         productInventoryRepository.save(productInventory);
-        return false;
+        return productInventory;
     }
 
     @Transactional
-    public boolean updateProductStock(Product product, Store store, int stock) {
+    public ProductInventory updateProductStock(Product product, Store store, int stock) {
         ProductInventory productInventory = productInventoryRepository.getProductInventory(product, store);
 
         if (productInventory == null) {
@@ -91,7 +91,7 @@ public class MerchantService {
 
         productInventory.setStock(stock);
         productInventoryRepository.save(productInventory);
-        return false;
+        return productInventory;
     }
 
     @Transactional
