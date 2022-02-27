@@ -3,7 +3,6 @@ package com.csci5308.w22.wiseshopping.models;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
-import java.sql.Time;
 
 /**
  * @author Nilesh
@@ -11,99 +10,46 @@ import java.sql.Time;
 @EqualsAndHashCode
 @Entity
 @Table
-public class ProductInventory {
+public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "inventory_id")
-    private int inventoryId;
-
-    @Column(name = "store_id")
-    private int storeId;
-
     @Column(name = "product_id")
-    private int startTime;
+    private int productId;
 
-    @Column(name = "price")
-    private int endTime;
+    @Column(name = "product_name")
+    private String productName;
 
-    @Column(name = "stock")
-    private int type;
+    @Column(name = "product_description")
+    private String productDescription;
 
-    private String contact;
+    public Product(){}
 
-    @ManyToOne
-    @JoinColumn(name="location_id", referencedColumnName = "location_id")
-    private Location location;
-
-    @ManyToOne
-    @JoinColumn(name="merchant_id", referencedColumnName = "merchant_id")
-    private Merchant merchant;
-
-    public ProductInventory(){}
-
-    public ProductInventory(String storeName, Time startTime, Time endTime, String type, String contact, Location location, Merchant merchant) {
-        this.storeName = storeName;
-        this.startTime = startTime;
-        this.endTime = endTime;
-        this.type = type;
-        this.contact = contact;
-        this.location = location;
-        this.merchant = merchant;
+    public Product(String productName, String productDesc) {
+        this.productName = productName;
+        this.productDescription = productDesc;
     }
 
-    public int getStoreId() {
-        return storeId;
+    public int getProductId() {
+        return productId;
     }
 
-    public void setStoreId(int storeId) {
-        this.storeId = storeId;
+    public void setProductId(int productId) {
+        this.productId = productId;
     }
 
-    public String getStoreName() {
-        return storeName;
+    public String getProductName() {
+        return productName;
     }
 
-    public void setStoreName(String storeName) {
-        this.storeName = storeName;
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+    public String getProductDescription() {
+        return productDescription;
     }
 
-    public void setStartTime(Time startTime) {
-        this.startTime = startTime;
+    public void setProductDescription(String productDescription) {
+        this.productDescription = productDescription;
     }
 
-    public void setEndTime(Time endTime) {
-        this.endTime = endTime;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getContact() {
-        return contact;
-    }
-
-    public void setContact(String contact) {
-        this.contact = contact;
-    }
-
-    public Location getLocation() {
-        return location;
-    }
-
-    public void setLocation(Location location) {
-        this.location = location;
-    }
-
-    public Merchant getMerchant() {
-        return merchant;
-    }
-
-    public void setMerchant(Merchant merchant) {
-        this.merchant = merchant;
-    }
 }

@@ -27,3 +27,90 @@ Consider the following:
 	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
 	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
 
+24-02-2022 13:03:42.760 [restartedMain] INFO  c.c.w.w.WiseshoppingApplication.logStarting - Starting WiseshoppingApplication using Java 17 on Nileshs-MacBook-Pro.local with PID 80892 (/Users/nileshgupta/Desktop/ADV_SDC_Project/Version_2/group8/target/classes started by nileshgupta in /Users/nileshgupta/Desktop/ADV_SDC_Project/Version_2/group8)
+24-02-2022 13:03:42.765 [restartedMain] INFO  c.c.w.w.WiseshoppingApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+24-02-2022 13:03:43.111 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+24-02-2022 13:03:43.113 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+24-02-2022 13:03:44.829 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-02-2022 13:03:44.898 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 55 ms. Found 4 JPA repository interfaces.
+24-02-2022 13:03:45.265 [restartedMain] WARN  o.s.c.a.AnnotationConfigApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+24-02-2022 13:03:45.273 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+24-02-2022 13:03:45.318 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+24-02-2022 13:06:13.434 [restartedMain] INFO  c.c.w.w.WiseshoppingApplication.logStarting - Starting WiseshoppingApplication using Java 17 on Nileshs-MacBook-Pro.local with PID 81039 (/Users/nileshgupta/Desktop/ADV_SDC_Project/Version_2/group8/target/classes started by nileshgupta in /Users/nileshgupta/Desktop/ADV_SDC_Project/Version_2/group8)
+24-02-2022 13:06:13.438 [restartedMain] INFO  c.c.w.w.WiseshoppingApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+24-02-2022 13:06:13.723 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+24-02-2022 13:06:13.724 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+24-02-2022 13:06:16.798 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-02-2022 13:06:17.058 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 226 ms. Found 4 JPA repository interfaces.
+24-02-2022 13:06:18.174 [restartedMain] WARN  o.s.c.a.AnnotationConfigApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+24-02-2022 13:06:18.185 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+24-02-2022 13:06:18.224 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+26-02-2022 23:53:43.950 [restartedMain] INFO  c.c.w.w.WiseshoppingApplication.logStarting - Starting WiseshoppingApplication using Java 17 on Vishnus-MacBook-Pro.local with PID 72923 (/Users/vishnusangaraju/Downloads/group8/target/classes started by vishnusangaraju in /Users/vishnusangaraju/Downloads/group8)
+26-02-2022 23:53:43.952 [restartedMain] INFO  c.c.w.w.WiseshoppingApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+26-02-2022 23:53:43.996 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+26-02-2022 23:53:43.996 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+26-02-2022 23:53:44.349 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+26-02-2022 23:53:44.391 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 36 ms. Found 4 JPA repository interfaces.
+26-02-2022 23:53:44.631 [restartedMain] WARN  o.s.c.a.AnnotationConfigApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+26-02-2022 23:53:44.639 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+26-02-2022 23:53:44.656 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+

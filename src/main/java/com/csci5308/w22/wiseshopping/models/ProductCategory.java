@@ -3,7 +3,6 @@ package com.csci5308.w22.wiseshopping.models;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
-import java.sql.Time;
 
 /**
  * @author Nilesh
@@ -11,42 +10,28 @@ import java.sql.Time;
 @EqualsAndHashCode
 @Entity
 @Table
-public class ProductInventory {
+public class ProductCategory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "inventory_id")
-    private int inventoryId;
-
-    //Crosscheck if this is One to Many or Many to One
-    @OneToMany
-    @JoinColumn(name="store_id", referencedColumnName = "store_id")
-    private Store store;
+    @Column(name = "product_category_id")
+    private int productCategoryId;
 
     @ManyToOne
     @JoinColumn(name="product_id", referencedColumnName = "product_id")
     private Product product;
 
-    @Column(name = "price")
-    private int price;
+    @Column(name = "product_category_name")
+    private String categoryName;
 
-    @Column(name = "stock")
-    private int stock;
+    @Column(name = "product_category_description")
+    private String categoryDesc;
 
-    public ProductInventory(){}
+    public ProductCategory(){}
 
-    public ProductInventory(Store store, Product product, int price, int stock) {
-        this.store = store;
+    public ProductCategory(Product product, String name, String desc) {
         this.product = product;
-        this.price = price;
-        this.stock = stock;
-    }
-
-    public Store getStore() {
-        return store;
-    }
-
-    public void setStore(Store store) {
-        this.store = store;
+        this.categoryName = name;
+        this.categoryDesc = desc;
     }
 
     public Product getProduct() {
@@ -57,19 +42,19 @@ public class ProductInventory {
         this.product = product;
     }
 
-    public int getPrice() {
-        return price;
+    public String getCategoryName() {
+        return categoryName;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 
-    public int getStock() {
-        return stock;
+    public String getCategoryDesc() {
+        return categoryDesc;
     }
 
-    public void setStock(int stock) {
-        this.stock = stock;
+    public void setCategoryDesc(String categoryDesc) {
+        this.categoryDesc = categoryDesc;
     }
 }

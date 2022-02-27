@@ -6,104 +6,70 @@ import javax.persistence.*;
 import java.sql.Time;
 
 /**
- * @author Elizabeth James
+ * @author Nilesh
 */
 @EqualsAndHashCode
 @Entity
 @Table
-public class Store {
+public class ProductInventory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "store_id")
-    private int storeId;
+    @Column(name = "inventory_id")
+    private int inventoryId;
 
-    @Column(name = "store_name")
-    private String storeName;
-
-    @Column(name = "start_time")
-    private Time startTime;
-
-    @Column(name = "end_time")
-    private Time endTime;
-
-    @Column(name = "type_of_business")
-    private String type;
-
-    private String contact;
+    //Crosscheck if this is One to Many or Many to One
+    @OneToMany
+    @JoinColumn(name="store_id", referencedColumnName = "store_id")
+    private Store store;
 
     @ManyToOne
-    @JoinColumn(name="location_id", referencedColumnName = "location_id")
-    private Location location;
+    @JoinColumn(name="product_id", referencedColumnName = "product_id")
+    private Product product;
 
-    @ManyToOne
-    @JoinColumn(name="merchant_id", referencedColumnName = "merchant_id")
-    private Merchant merchant;
+    @Column(name = "price")
+    private int price;
 
-    public Store(){}
+    @Column(name = "stock")
+    private int stock;
 
-    public Store(String storeName, Time startTime, Time endTime, String type, String contact, Location location, Merchant merchant) {
-        this.storeName = storeName;
-        this.startTime = startTime;
-        this.endTime = endTime;
-        this.type = type;
-        this.contact = contact;
-        this.location = location;
-        this.merchant = merchant;
+    public ProductInventory(){}
+
+    public ProductInventory(Store store, Product product, int price, int stock) {
+        this.store = store;
+        this.product = product;
+        this.price = price;
+        this.stock = stock;
     }
 
-    public int getStoreId() {
-        return storeId;
+    public Store getStore() {
+        return store;
     }
 
-    public void setStoreId(int storeId) {
-        this.storeId = storeId;
+    public void setStore(Store store) {
+        this.store = store;
     }
 
-    public String getStoreName() {
-        return storeName;
+    public Product getProduct() {
+        return product;
     }
 
-    public void setStoreName(String storeName) {
-        this.storeName = storeName;
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
-    public void setStartTime(Time startTime) {
-        this.startTime = startTime;
+    public int getPrice() {
+        return price;
     }
 
-    public void setEndTime(Time endTime) {
-        this.endTime = endTime;
+    public void setPrice(int price) {
+        this.price = price;
     }
 
-    public String getType() {
-        return type;
+    public int getStock() {
+        return stock;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getContact() {
-        return contact;
-    }
-
-    public void setContact(String contact) {
-        this.contact = contact;
-    }
-
-    public Location getLocation() {
-        return location;
-    }
-
-    public void setLocation(Location location) {
-        this.location = location;
-    }
-
-    public Merchant getMerchant() {
-        return merchant;
-    }
-
-    public void setMerchant(Merchant merchant) {
-        this.merchant = merchant;
+    public void setStock(int stock) {
+        this.stock = stock;
     }
 }

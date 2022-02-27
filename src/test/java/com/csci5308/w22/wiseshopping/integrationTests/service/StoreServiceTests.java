@@ -43,4 +43,9 @@ public class StoreServiceTests {
         merchantService.removeMerchant("dummy@dummy.com");
         locationService.remove(location);
     }
+
+    //Getting the user
+    //Updating the user
+    //Assert
+
 }
