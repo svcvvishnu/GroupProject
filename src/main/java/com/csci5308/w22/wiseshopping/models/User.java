@@ -54,6 +54,24 @@ public class User {
 
     }
 
+    public User(String userFirstName, String userLastName, String email, String password, String contact, Timestamp register_at) {
+        this.userFirstName = userFirstName;
+        this.userLastName = userLastName;
+        this.email = email;
+        this.password = encode(password);
+        this.contact = contact;
+        this.register_at = register_at;
+    }
+
+    public User(String userFirstName, String userLastName, String email, String contact) {
+        this.userFirstName = userFirstName;
+        this.userLastName = userLastName;
+        this.email = email;
+        this.contact = contact;
+
+    }
+
+
     /**
      * this encodes the password using sha 256 algorithm
      * @param password password
